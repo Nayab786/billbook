@@ -1,10 +1,12 @@
 import React from 'react';
+import './cell.style.css';
 
 function Cell(props){
-    const scope = props.scope||'';
     const value = props.value||'';
     return (
-        <th contentEditable={true} scope={scope}>{value}</th>
+    <td className="cell">
+        <div contentEditable="true">{value}</div>
+    </td>
     )
 }
 

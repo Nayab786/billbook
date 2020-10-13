@@ -1,13 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import './column.style.css';
 
-function Column(props){
+function Column(props) {
     console.log("colmn", props)
-    const id = props.id || '';
-    const width = props.cw>60?`100%`:`${(100/60)*props.width}%`;
-    const displayNamne = props.display_name;
-    return(
-        <th scope="col" id={id} width={width}>{displayNamne}</th>
+    const {
+        col_id: id,
+        col_position: position,
+        col_name: name,
+        col_label: label
+    } = props;
+    let width = props.width;
+    width = props.cw > 60 ? `100%` : `${(100 / 60) * props.width}%`;
+    return (
+        <th className="column" scope="col" id={id} width={width}>{label}</th>
     )
 }
 

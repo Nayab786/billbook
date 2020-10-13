@@ -1,0 +1,10 @@
+.cell{
+    padding:0px !important;
+}
+
+.cell>div{
+    width:100%;
+    border:none;
+    padding: 5px; 
+    text-align: left; 
+}
